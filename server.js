@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = 8000;
 
+// middleware
+
 
 const rappers = {
     '21 savage' : {
@@ -37,6 +39,6 @@ app.get('/api/:name', (request, response) => {
 })
 
 
-app.listen(PORT, (request, response) => {
+app.listen(process.env.PORT || PORT, (request, response) => {
     console.log(`The server is now running on port ${PORT}! Betta Go Catch It!`);
 })
